@@ -1,0 +1,225 @@
+:root {
+  --dark: #19283f;
+  --green: #33d1cc;
+  --red: #ff3150;
+  --yellow: #ffc400;
+  --section: #eff7fa;
+}
+
+a {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../assets/Fonts/Roboto-Regular.ttf");
+}
+
+* {
+  font-family: "Roboto";
+}
+/* Components */
+.main-btn {
+  background-color: var(--red);
+  color: var(--yellow);
+  padding: 0.5rem 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.main-btn:hover {
+  color: var(--yellow);
+}
+.main-title img {
+  margin-bottom: 1rem;
+}
+.main-title::after {
+  content: "";
+  width: 120px;
+  height: 4px;
+  position: absolute;
+  bottom: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--green);
+}
+/* Start NavBar */
+.navbar {
+  background-color: var(--dark);
+}
+.navbar .nav-link {
+  color: white;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link:focus,
+.navbar .nav-link:active {
+  color: var(--green) !important;
+}
+.navbar .search {
+  border-left: 2px solid var(--green);
+}
+.navbar .search svg {
+  color: var(--green);
+}
+.navbar-toggler {
+  border-color: white;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+.navbar-toggler[aria-expanded="true"] {
+  border-color: var(--green);
+  color: var(--green);
+}
+/* End Nav */
+/* Start Landing */
+.landing {
+  min-height: calc(100vh - 74px);
+  background-color: var(--dark);
+}
+/* End Landing */
+/* Start Features */
+.feature .icon-container {
+  min-height: 200px;
+}
+
+.feature h3 {
+  color: var(--yellow);
+}
+.icon-container svg {
+  bottom: 0;
+  color: var(--green);
+  position: absolute;
+  font-size: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.icon-container .number {
+  font-size: 12rem;
+  color: var(--section);
+}
+/* End Features */
+/* Start Out Work */
+.our-work {
+  background-color: var(--section);
+}
+.our-work ul li {
+  margin: 0 0.8rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+.our-work ul li.active {
+  padding: 0.5rem 1rem;
+  background-color: var(--red);
+  color: var(--yellow);
+  border-radius: 20px;
+}
+.our-work ul li:not(.active):hover {
+  color: var(--red);
+}
+.our-work .box {
+  padding: 5px;
+  overflow: hidden;
+}
+.our-work .box::before {
+  content: attr(data-desc);
+  position: absolute;
+  text-align: center;
+  background-color: rgb(51 209 204 / 76%);
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  transform: translateX(calc(-100% - 5px));
+  transition-duration: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+.our-work .box:hover::before {
+  transform: translateX(0);
+}
+
+/* End Out Work */
+/* Start About */
+.about-para {
+  width: 60ch;
+}
+/* End About */
+/* Start Team */
+.team {
+  background-color: var(--section);
+}
+.team .main-title h2 {
+  color: var(--yellow);
+}
+.team .main-title::after {
+  display: none;
+}
+.team .name {
+  background-color: var(--green);
+}
+/* End Team */
+/* Start Project */
+.start-project {
+  background-color: var(--dark);
+}
+/* End Project */
+/* Start Newsletter */
+.newsletter {
+  background-color: var(--yellow);
+}
+.newsletter .sub-p {
+  color: var(--dark);
+}
+.newsletter input {
+  background-color: transparent;
+  border: none;
+}
+.newsletter input:focus {
+  outline: none;
+}
+.newsletter input::placeholder {
+  color: white;
+}
+.newsletter .main-btn {
+  background-color: var(--dark);
+}
+/* End Newsletter */
+/* Start Footer */
+footer {
+  background-color: var(--dark);
+}
+footer span:first-of-type {
+  color: var(--green);
+}
+footer p:nth-of-type(3) span {
+  color: var(--yellow);
+}
+footer ul li {
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+}
+footer .icons li {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  color: white;
+}
+footer .face {
+  background-color: #4267b2;
+}
+footer .twitter {
+  background-color: #00acee;
+}
+footer .link {
+  background-color: #0072b1;
+}
+footer .you {
+  background-color: red;
+}
+/* End Footer */
