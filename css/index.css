@@ -78,6 +78,10 @@ a {
 }
 /* End Landing */
 /* Start Features */
+.feature {
+  transform: translateY(100px);
+  opacity: 0;
+}
 .feature .icon-container {
   min-height: 200px;
 }
@@ -119,6 +123,8 @@ a {
 .our-work .box {
   padding: 5px;
   overflow: hidden;
+  transform: translateY(100px);
+  opacity: 0;
 }
 .our-work .box::before {
   content: attr(data-desc);
@@ -145,6 +151,10 @@ a {
 .about-para {
   width: 60ch;
 }
+.about img {
+  transform: translateY(100px);
+  opacity: 0;
+}
 /* End About */
 /* Start Team */
 .team {
@@ -159,7 +169,12 @@ a {
 .team .name {
   background-color: var(--green);
 }
+.team-mem {
+  transform: translateX(-100px);
+  opacity: 0;
+}
 /* End Team */
+
 /* Start Project */
 .start-project {
   background-color: var(--dark);
@@ -223,3 +238,54 @@ footer .you {
   background-color: red;
 }
 /* End Footer */
+/* Animations */
+@keyframes fadeInTop {
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeOutDown {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+}
+@keyframes fadeInRight {
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOutLeft {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
